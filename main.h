@@ -27,10 +27,16 @@
 struct fmt
 {
 	char fmt;
-	int(*fn)(va_list, char[], int, int, int, int)
+	int(*fn)(va_list, char[], int, int, int, int);
 };
 
 
 /**
  * typedef struct fmt fmt_t - struct op
  */
+int print_char(va_list types, char bufftter[],
+	int flags, int width,int precision, int size);
+int print_string(va_list types, char buffer[],
+	int flags, int width, intr precision, int size);
+int print_percent(va_list types, char buffer[],
+	int flags, int width
